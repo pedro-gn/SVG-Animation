@@ -1,0 +1,82 @@
+
+header {
+    background: url('../images/forest.jpg') no-repeat center center fixed;;
+    width: 100%;
+    height: 120vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: #1b6535;
+}
+.logo svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100vh;
+    width: 30%;
+    min-width: 350px;
+}
+.logo path {
+    stroke: white;
+    fill: rgba(255,255,255,1) ; 
+    stroke-dasharray: 1800;
+    opacity: 10 ;
+    animation: animate 3s cubic-bezier(0,0.23,1,.1);
+}
+#circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27%;
+    min-width: 300px;
+    display: none;
+    
+}
+.circle svg circle {
+    stroke: white;
+    stroke-dasharray: 1800;
+    opacity: 1;
+    animation: animateCircle 1.5s cubic-bezier(0,0.23,1,.1);
+}
+
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1800;
+    }
+    30%{
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 1800;
+    }
+    90%{
+        fill: rgba(255,255,255,0);
+    }
+    100% {
+        opacity: 10;
+        fill: rgba(255,255,255,1);
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes animateCircle {
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1800;
+    }
+    30%{
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 1800;
+    }
+    90%{
+        fill: rgba(255,255,255,0);
+    }
+    100% {
+        opacity: 10;
+        stroke-dashoffset: 0;
+    }
+}
